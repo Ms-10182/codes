@@ -91,11 +91,6 @@ const contractABI = [
 				"internalType": "uint256",
 				"name": "voteCount",
 				"type": "uint256"
-			},
-			{
-				"internalType": "bool",
-				"name": "exists",
-				"type": "bool"
 			}
 		],
 		"stateMutability": "view",
@@ -308,7 +303,7 @@ const contractABI = [
 let provider;
 let signer;
 let contract;
-const contractAddress = "0x572176007eCe35f657E5a72E2D2F506718C8c103"; // Replace with your contract address
+const contractAddress = "0x97756a34eF4Fe8db0B36Bbac560EA5Ba487d9166"; // Replace with your contract address
 
 async function connectToMetaMask() {
   if (typeof window.ethereum !== "undefined") {
