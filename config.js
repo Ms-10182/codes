@@ -303,7 +303,7 @@ const contractABI = [
 let provider;
 let signer;
 let contract;
-const contractAddress = "0x97756a34eF4Fe8db0B36Bbac560EA5Ba487d9166"; // Replace with your contract address
+const contractAddress = "0x9f1Ce5C8a103C401CAab04C8B9b55f55122ebb58"; // Replace with your contract address
 
 async function connectToMetaMask() {
   if (typeof window.ethereum !== "undefined") {
