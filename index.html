@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting System DApp</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.13.2/ethers.umd.min.js"
+    type="application/javascript"></script>    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input, button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Voting System DApp</h2>
+
+    <button id="walltConnect" onclick="connectToMetaMask()">connect wallet</button>
+
+    <h3>Start Voting</h3>
+    <input type="text" id="voterName" placeholder="Owner Name" />
+    <input type="text" id="voterAddress" placeholder="Owner Address (0x...)" />
+    <button onclick="startVoting()">Start Voting</button>
+
+    <h3>Add Candidate</h3>
+    <input type="text" id="candidateName" placeholder="Candidate Name" />
+    <input type="text" id="candidateAddress" placeholder="Candidate Address (0x...)" />
+    <button onclick="addCandidate()">Add Candidate</button>
+
+    <h3>Add Voters</h3>
+    <input type="text" id="votersAddresses" placeholder="Comma-separated Voter Addresses" />
+    <button onclick="addVoters()">Add Voters</button>
+
+    <h3>Vote</h3>
+    <input type="text" id="voteFor" placeholder="Candidate Address (0x...)" />
+    <button onclick="vote()">Vote</button>
+
+    <h3>End Voting</h3>
+    <button onclick="endVoting()">End Voting</button>
+
+    <h3>Add Owner</h3>
+    <input type="text" id="newOwner" placeholder="New Owner Address (0x...)" />
+    <button onclick="addOwner()">Add Owner</button>
+
+    <h3>Get Candidates</h3>
+    <button onclick="getCandidates()">Get Candidates</button>
+    <ul id="candidate-list"></ul>
+
+
+    <h3>Get Candidate Details</h3>
+    <input type="text" id="candidateDetailsAddress" placeholder="Candidate Address (0x...)" />
+    <button onclick="getCandidateDetails()">Get Candidate Details</button>
+
+    <h3>Get Winner</h3>
+    <button onclick="getWinners()">Get Winner(s)</button>
+
+    <h3>Reset Voting</h3>
+    <button onclick="resetVoting()">Reset Voting</button>
+
+    <!-- <p id="output"></p> -->
+</div>
+<script src="config.js"></script>
+
+</body>
+</html>
